@@ -74,3 +74,35 @@ int	valid_int(char *s)
 		return (1);
 	return (0);
 }
+
+/** This function is the main checker function and calls
+ * the corresponding functions to fully validate the input string.
+**/
+int	check_input(t_stack **a, const char *str)
+{
+	int		i;
+	char	**tmp;
+
+	i = 0;
+	if (*str == '\0')
+		return (0);
+	tmp = ft_split(str, ' ');
+	while (tmp[i] != NULL)
+	{
+		if (!is_number(tmp[i]) || !valid_int(tmp[i]))
+		{
+			free_array(tmp);
+			return (0);
+		}
+		i++;
+	}
+	init_stack_a(a, tmp);
+	if (check_duplicates(*a))
+	{
+		free_array(tmp);
+		free_stack(*a);
+		return (0);
+	}
+	free_array(tmp);
+	return (1);
+}
