@@ -26,3 +26,15 @@ static void	rotate(t_stack **stack)
 	lastnode->next = first;
 	first->next = NULL;
 }
+
+void	ra(t_stack **a)
+{
+	rotate(a);
+	ft_printf("ra\n");
+}
+
+void	rb(t_stack **b)
+{
+	rotate(b);
+	ft_printf("rb\n");
+}
