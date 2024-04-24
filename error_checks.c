@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 15:47:36 by dabochko          #+#    #+#             */
-/*   Updated: 2024/04/15 15:53:42 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:59:29 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,36 @@ int	valid_int(char *s)
 	if (nbr >= INT_MIN && nbr <= INT_MAX)
 		return (1);
 	return (0);
+}
+
+/** This function is the main checker function and calls
+ * the corresponding functions to fully validate the input string.
+**/
+int	check_input(t_stack **a, const char *str)
+{
+	int		i;
+	char	**tmp;
+
+	i = 0;
+	if (*str == '\0')
+		return (0);
+	tmp = ft_split(str, ' ');
+	while (tmp[i] != NULL)
+	{
+		if (!is_number(tmp[i]) || !valid_int(tmp[i]))
+		{
+			free_array(tmp);
+			return (0);
+		}
+		i++;
+	}
+	init_stack_a(a, tmp);
+	if (check_duplicates(*a))
+	{
+		free_array(tmp);
+		free_stack(*a);
+		return (0);
+	}
+	free_array(tmp);
+	return (1);
 }
