@@ -50,3 +50,10 @@ t_stack	*find_max(t_stack *stack);
 void	init_stack_b(t_stack **a, t_stack **b);
 void	b_to_a(t_stack **a, t_stack **b);
 void	set_target_b(t_stack *a, t_stack *b);
+
+/* convert argv to stack */
+void	init_stack_a(t_stack **a, char **str);
+void	set_cheapest(t_stack *stack);
+void	set_index(t_stack *stack);
+void	set_push_cost(t_stack *a, t_stack *b);
+
