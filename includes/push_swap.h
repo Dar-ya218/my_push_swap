@@ -26,10 +26,10 @@ void	pa(t_stack **a, t_stack **b); //Toma el primer elemento de la pila b y lo p
 void	pb(t_stack **a, t_stack **b); //Toma el primer elemento de la pila a y lo pone en la parte superior de la pila b.
 
 void	rrr(t_stack **a, t_stack **b); //  Estas funciones rotan las pilas hacia la derecha (el último elemento se convierte en el primero).
-void	rrb(t_stack **b); //  Estas funciones intercambian los dos primeros elementos de las pilas.
-void	rra(t_stack **a); //  Estas funciones rotan las pilas hacia la izquierda (el primer elemento se convierte en el último).
+void	rrb(t_stack **b); 
+void	rra(t_stack **a); 
 
-void	rr(t_stack **a, t_stack **b);
+void	rr(t_stack **a, t_stack **b); // giran los bloques hacia la izquierda
 void	rb(t_stack **b);
 void	ra(t_stack **a);
 
@@ -41,3 +41,12 @@ void	rev_rotate_both(t_stack **a, t_stack **b, t_stack *target);
 void	target_top_a(t_stack **a, t_stack *target);
 void	target_top_b(t_stack **b, t_stack *target);
 void	min_to_top(t_stack **a);
+
+/* algorithm */
+void	big_sort(t_stack **a, t_stack **b);
+int		is_sorted(t_stack **stack);
+void	sort3(t_stack **stack);
+t_stack	*find_max(t_stack *stack);
+void	init_stack_b(t_stack **a, t_stack **b);
+void	b_to_a(t_stack **a, t_stack **b);
+void	set_target_b(t_stack *a, t_stack *b);
