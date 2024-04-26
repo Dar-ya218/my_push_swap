@@ -63,3 +63,12 @@ int		check_duplicates(t_stack *a);
 int		is_number(const char *str);
 int		valid_int(char *s);
 int		check_input(t_stack **a, const char *str);
+
+/* free */
+void	free_array(char **str);
+void	free_stack(t_stack *stack);
+
+/* stack utils */
+t_stack	*ft_stacknew(long content);
+t_stack	*ft_stacklast(t_stack *stack);
+void	ft_stackadd_back(t_stack **stack, t_stack *new);
