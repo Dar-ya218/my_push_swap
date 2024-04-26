@@ -57,3 +57,9 @@ void	set_cheapest(t_stack *stack);
 void	set_index(t_stack *stack);
 void	set_push_cost(t_stack *a, t_stack *b);
 
+/* input and error checks */
+int		compare_num(const char *s1, const char *s2);
+int		check_duplicates(t_stack *a);
+int		is_number(const char *str);
+int		valid_int(char *s);
+int		check_input(t_stack **a, const char *str);
