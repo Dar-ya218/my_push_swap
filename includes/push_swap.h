@@ -72,3 +72,12 @@ void	free_stack(t_stack *stack);
 t_stack	*ft_stacknew(long content);
 t_stack	*ft_stacklast(t_stack *stack);
 void	ft_stackadd_back(t_stack **stack, t_stack *new);
+
+/* utils */
+char	*join_arguments(char **argv, int argc);
+int		ft_stacksize(t_stack *stack);
+long	ft_atol(const char *str);
+t_stack	*find_cheapest(t_stack *stack);
+t_stack	*find_min(t_stack *stack);
+
+#endif
