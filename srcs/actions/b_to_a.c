@@ -32,3 +32,15 @@ void	set_target_b(t_stack *a, t_stack *b)
 		b = b->next;
 	}
 }
+
+/** This Function initiates stack b and sets the required indices, 
+ * targets, push cost and the cheapest cost
+**/
+void	init_stack_b(t_stack **a, t_stack **b)
+{
+	set_index(*a);
+	set_index(*b);
+	set_target_b(*a, *b);
+	set_push_cost(*a, *b);
+	set_cheapest(*b);
+}
