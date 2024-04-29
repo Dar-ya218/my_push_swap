@@ -57,3 +57,27 @@ void	set_cheapest(t_stack *stack);
 void	set_index(t_stack *stack);
 void	set_push_cost(t_stack *a, t_stack *b);
 
+/* input and error checks */
+int		compare_num(const char *s1, const char *s2);
+int		check_duplicates(t_stack *a);
+int		is_number(const char *str);
+int		valid_int(char *s);
+int		check_input(t_stack **a, const char *str);
+
+/* free */
+void	free_array(char **str);
+void	free_stack(t_stack *stack);
+
+/* stack utils */
+t_stack	*ft_stacknew(long content);
+t_stack	*ft_stacklast(t_stack *stack);
+void	ft_stackadd_back(t_stack **stack, t_stack *new);
+
+/* utils */
+char	*join_arguments(char **argv, int argc);
+int		ft_stacksize(t_stack *stack);
+long	ft_atol(const char *str);
+t_stack	*find_cheapest(t_stack *stack);
+t_stack	*find_min(t_stack *stack);
+
+#endif
