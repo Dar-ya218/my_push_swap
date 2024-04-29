@@ -44,3 +44,26 @@ void	init_stack_b(t_stack **a, t_stack **b)
 	set_push_cost(*a, *b);
 	set_cheapest(*b);
 }
+
+/** This function pushes the nodes from stack b to stack a by 
+ * using the target nodes that we found in the functions above.
+**/
+void	b_to_a(t_stack **a, t_stack **b)
+{
+	t_stack	*cheapest;
+
+	cheapest = find_cheapest(*b);
+	if (cheapest->target->above_median
+		&& cheapest->above_median)
+	{
+		rev_rotate_both(a, b, cheapest);
+	}
+	else if (!(cheapest->target->above_median)
+		&& !(cheapest->above_median))
+	{
+		rotate_both(a, b, cheapest);
+	}
+	target_top_b(b, cheapest);
+	target_top_a(a, cheapest->target);
+	pa(a, b);
+}
