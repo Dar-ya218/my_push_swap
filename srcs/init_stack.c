@@ -43,3 +43,29 @@ void	set_cheapest(t_stack *stack)
 	}
 	cheapest->cheapest = true;
 }
+
+/** This function sets the index of each node (its position in the list)
+ * It also checks whether the position is under or above the median.
+ * This is useful when we are doing our cost analysis later.
+**/
+void	set_index(t_stack *stack)
+{
+	int	i;
+	int	median;
+
+	i = 0;
+	median = ft_stacksize(stack) / 2;
+	while (stack)
+	{
+		if (stack != NULL)
+		{
+			stack->index = i;
+			if (i <= median)
+				stack->above_median = false;
+			else
+				stack->above_median = true;
+		}
+		i++;
+		stack = stack->next;
+	}
+}
