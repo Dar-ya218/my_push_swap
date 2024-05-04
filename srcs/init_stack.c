@@ -19,3 +19,27 @@ void	init_stack_a(t_stack **a, char **str)
 		i++;
 	}
 }
+
+/** This function finds the cheapest node by comparing push_cost for each node.
+ * It uses the maximum as a starting point for comparison.
+**/
+void	set_cheapest(t_stack *stack)
+{
+	long	min;
+	t_stack	*cheapest;
+
+	if (stack == NULL)
+		return ;
+	min = LONG_MAX;
+	while (stack)
+	{
+		if (stack->push_cost < min)
+		{
+			min = stack->push_cost;
+			cheapest = stack;
+		}
+		stack->cheapest = false;
+		stack = stack->next;
+	}
+	cheapest->cheapest = true;
+}
