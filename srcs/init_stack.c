@@ -69,3 +69,28 @@ void	set_index(t_stack *stack)
 		stack = stack->next;
 	}
 }
+
+
+/** This function calculates the push cost for each node
+ * by doing some simple calculations using the median, length of 
+ * list and its current position. 
+**/
+void	set_push_cost(t_stack *a, t_stack *b)
+{
+	int	a_length;
+	int	b_length;
+
+	a_length = ft_stacksize(a);
+	b_length = ft_stacksize(b);
+	while (b)
+	{
+		b->push_cost = b->index;
+		if (b->above_median)
+			b->push_cost = b_length - (b->index);
+		if (b->target->above_median)
+			b->push_cost += a_length - (b->target->index);
+		else
+			b->push_cost += b->target->index;
+		b = b->next;
+	}
+}
