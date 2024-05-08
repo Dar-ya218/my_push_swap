@@ -15,3 +15,14 @@ void	rev_rotate_both(t_stack **a, t_stack **b, t_stack *target)
 	set_index(*a);
 	set_index(*b);
 }
+
+void	target_top_a(t_stack **a, t_stack *target)
+{
+	while (*a != target)
+	{
+		if (target->above_median)
+			rra(a);
+		else
+			ra(a);
+	}
+}
