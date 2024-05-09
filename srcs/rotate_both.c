@@ -26,3 +26,14 @@ void	target_top_a(t_stack **a, t_stack *target)
 			ra(a);
 	}
 }
+
+void	target_top_b(t_stack **b, t_stack *target)
+{
+	while (*b != target)
+	{
+		if (target->above_median)
+			rrb(b);
+		else
+			rb(b);
+	}
+}
