@@ -37,3 +37,20 @@ void	target_top_b(t_stack **b, t_stack *target)
 			rb(b);
 	}
 }
+
+void	min_to_top(t_stack **a)
+{
+	t_stack	*min;
+
+	min = find_min(*a);
+	if (min->above_median == 0)
+	{
+		while (*a != min)
+			ra(a);
+	}
+	else
+	{
+		while (*a != min)
+			rra(a);
+	}
+}
