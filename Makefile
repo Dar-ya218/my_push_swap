@@ -26,3 +26,39 @@ SRCS = $(SRCS_DIR)actions/swap.c \
 	   $(SRCS_DIR)sort3.c \
 	   $(SRCS_DIR)stack_utils.c \
 	   $(SRCS_DIR)utils.c
+
+OBJ = $(patsubst $(SRCS_DIR)%.c,$(OBJ_DIR)%.o,$(SRCS))
+
+#---------------COMPILING-------------#
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g $(INC)
+
+#-----------------RULES---------------#
+$(OBJ_DIR)%.o:$(SRCS_DIR)%.c $(LIBS)
+	@mkdir -p $(dir $@)
+	@$(CC) -c $(CFLAGS) -o $@ $<
+	@echo "Compiling $<"
+
+all: lib $(NAME)
+
+lib:
+	@make -C $(LIB_DIR)libft
+	@make -C $(LIB_DIR)printf
+
+$(NAME): $(OBJ) $(LIBS) Makefile $(INC_DIR) $(LIB_DIR)
+	@$(CC) $(OBJ) $(LIBS) -o $(NAME)
+	@echo "Built $(NAME)"
+
+clean:
+	make clean -C $(LIB_DIR)libft
+	make clean -C $(LIB_DIR)printf
+	rm -rf $(OBJ_DIR)
+
+fclean: clean
+	make fclean -C $(LIB_DIR)libft
+	make fclean -C $(LIB_DIR)printf
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re 
