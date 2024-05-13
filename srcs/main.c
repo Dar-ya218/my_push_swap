@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 14:54:35 by dabochko          #+#    #+#             */
-/*   Updated: 2024/04/10 14:54:52 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:29:28 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 void	push_swap(t_stack **a, t_stack **b)
 {
