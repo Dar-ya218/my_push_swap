@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort3.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:16:03 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/09 14:16:16 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:31:59 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,24 @@ t_stack	*find_max(t_stack *stack)
 		stack = stack->next;
 	}
 	return (max_node);
+}
+
+
+/** This function will sort three nodes in ascending order
+ * It finds the node w. max value and compares it to the first and second. 
+ * If the node head is still bigger than the 2nd, we perform a swap.
+**/
+void	sort3(t_stack **stack)
+{
+	t_stack	*max;
+
+	if (is_sorted(stack))
+		return ;
+	max = find_max(*stack);
+	if (*stack == max)
+		ra(stack);
+	else if ((*stack)->next == max)
+		rra(stack);
+	if (((*stack)->number) > ((*stack)->next->number))
+		sa(stack);
 }
