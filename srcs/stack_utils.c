@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:13:31 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/15 10:10:49 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 10:12:09 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,20 @@ t_stack	*ft_stacklast(t_stack *stack)
 		stack = stack->next;
 	}
 	return (last);
+}
+
+/** This function will add the new node to the end of the linked list **/
+void	ft_stackadd_back(t_stack **stack, t_stack *new)
+{
+	t_stack	*last;
+
+	if (new == NULL)
+		return ;
+	if (*stack == NULL)
+	{
+		*stack = new;
+		return ;
+	}
+	last = ft_stacklast(*stack);
+	last->next = new;
 }
