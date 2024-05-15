@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:10:23 by dabochko          #+#    #+#             */
-/*   Updated: 2024/03/12 15:33:00 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:53:57 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,6 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(args);
 	return (total_len);
-}
-int	main(void)
-{
-	int	i;
-	int	i;
-	int	j;
-
-	i = ft_printf("hola %c %s %i %d %u %x %X %p",\
-	'c', NULL, 547, -13, -1, 255, 255, &i);
-	//printf("\n%d\n", i);
-	ft_printf("%"); // '%' '\0' == 2
-	return (0);
 }
 /*
 int	main(void)

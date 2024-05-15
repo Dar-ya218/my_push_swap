@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:15:32 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/15 13:50:04 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:44:43 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,39 @@ long	ft_atol(const char	*str)
 		i++;
 	}
 	return (sign * res);
+}
+
+t_stack	*find_cheapest(t_stack *stack)
+{
+	t_stack	*cheapest;
+
+	if (stack == NULL)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest == true)
+			cheapest = stack;
+		stack = stack->next;
+	}
+	return (cheapest);
+}
+
+t_stack	*find_min(t_stack *stack)
+{
+	long	min;
+	t_stack	*smallest;
+
+	if (stack == NULL)
+		return (NULL);
+	min = LONG_MAX;
+	while (stack)
+	{
+		if (stack->number < min)
+		{
+			min = stack->number;
+			smallest = stack;
+		}
+		stack = stack->next;
+	}
+	return (smallest);
 }
