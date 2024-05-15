@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:32:07 by dabochko          #+#    #+#             */
-/*   Updated: 2024/04/16 14:32:13 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:03:50 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 static void	rotate(t_stack **stack)

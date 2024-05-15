@@ -6,10 +6,11 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:06:13 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/13 13:22:48 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 14:29:39 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/push_swap.h"
 
 /** This function sets the target node from stack a to the
  * stack b. The target node should be the closest bigger

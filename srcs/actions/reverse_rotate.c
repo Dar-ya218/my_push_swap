@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
+/*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:32:56 by dabochko          #+#    #+#             */
-/*   Updated: 2024/04/16 14:32:59 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 15:19:54 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 static void	reverse_rotate(t_stack **stack)
