@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:13:31 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/14 14:58:46 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 10:10:49 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,17 @@ t_stack	*ft_stacknew(long content)
 	new->number = content;
 	new->next = NULL;
 	return (new);
+}
+
+t_stack	*ft_stacklast(t_stack *stack)
+{
+	t_stack	*last;
+
+	last = stack;
+	while (stack != NULL)
+	{
+		last = stack;
+		stack = stack->next;
+	}
+	return (last);
 }
