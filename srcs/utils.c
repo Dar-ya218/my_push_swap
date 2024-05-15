@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:15:32 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/15 15:44:43 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/15 16:52:50 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,19 @@ t_stack	*find_min(t_stack *stack)
 		stack = stack->next;
 	}
 	return (smallest);
+}
+
+int		ft_stacksize(t_stack *stack)
+{
+	int		size;
+	t_stack	*tmp;
+
+	size = 0;
+	tmp = stack;
+	while (tmp)
+	{
+		size++;
+		tmp = tmp->next;
+	}
+	return (size);
 }
