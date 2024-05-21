@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:16:03 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/13 13:31:59 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:39:20 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ t_stack	*find_max(t_stack *stack)
 	}
 	return (max_node);
 }
-
 
 /** This function will sort three nodes in ascending order
  * It finds the node w. max value and compares it to the first and second. 

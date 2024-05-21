@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 14:21:25 by dabochko          #+#    #+#             */
-/*   Updated: 2024/05/13 13:28:39 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:21:30 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ void	set_index(t_stack *stack)
 		stack = stack->next;
 	}
 }
-
 
 /** This function calculates the push cost for each node
  * by doing some simple calculations using the median, length of 

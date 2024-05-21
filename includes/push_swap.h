@@ -6,7 +6,7 @@
 /*   By: dabochko <dabochko@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 15:54:38 by dabochko          #+#    #+#             */
-/*   Updated: 2024/04/30 15:57:22 by dabochko         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:15:07 by dabochko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PUSH_SWAP_H
@@ -33,14 +33,14 @@ typedef struct s_stack
 }	t_stack;
 
 /* actions */
-void	pa(t_stack **a, t_stack **b); //Toma el primer elemento de la pila b y lo pone en la parte superior de la pila a.
-void	pb(t_stack **a, t_stack **b); //Toma el primer elemento de la pila a y lo pone en la parte superior de la pila b.
+void	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
 
-void	rrr(t_stack **a, t_stack **b); //  Estas funciones rotan las pilas hacia la derecha (el último elemento se convierte en el primero).
-void	rrb(t_stack **b); 
-void	rra(t_stack **a); 
+void	rrr(t_stack **a, t_stack **b);
+void	rrb(t_stack **b);
+void	rra(t_stack **a);
 
-void	rr(t_stack **a, t_stack **b); // giran los bloques hacia la izquierda
+void	rr(t_stack **a, t_stack **b);
 void	rb(t_stack **b);
 void	ra(t_stack **a);
 
